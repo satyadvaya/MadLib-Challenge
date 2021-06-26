@@ -1,0 +1,71 @@
+header {
+    font-size: 4REM;
+    font-weight: bolder;
+    color: white;
+    background: rgb(29, 78, 62);
+    height: 100px;
+}
+
+body {
+    background: rgb(37, 66, 66); 
+    text-align: center;    
+}
+
+#disappear {
+    display: grid;
+    justify-content: space-evenly;
+    height: 200px;
+    color: azure;
+    font-size: xx-large;
+    margin-top: 5px;
+
+}
+
+.input-columns {
+   display: grid;
+   grid-template-columns: 33% 33% 33%;
+  
+    
+}
+
+input {
+    justify-self: center;
+    margin: 5px;
+    width: 200px;
+    height: 30px;
+    border: rgb(12, 247, 188) solid 3px;
+    border-radius: 4px;
+    color: rgb(15, 107, 76);   
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+}
+
+input:hover {
+    background: rgb(78, 231, 185);
+    opacity: 30%;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 3px solid rgb(12, 247, 188);
+    border-radius: 50px;
+    font-size: 60px;
+}
+
+button:hover{
+    background:rgb(253, 84, 121);
+}
+
+footer {
+    background-color: rgb(29, 78, 62);
+    height: 40px;
+    color: white;
+    margin-top: 5px;
+}
+
+main {
+    border:rgb(241, 243, 242) solid 1px
+}
