@@ -9,6 +9,7 @@ const furnitureInput = document.getElementById("furniture-input"); //
 const fireInput = document.getElementById("candle-input"); //
 const jugInput = document.getElementById("jug-input"); //
 const button = document.getElementById("button"); //
+const disappearPoeam = document.getElementById('disappear');
 
 // SPANS
 const firstLocation = document.getElementById("non-sense-loc"); //
@@ -44,11 +45,12 @@ button.addEventListener('click', ()=> {
         z.textContent = lastNameInput.value;
     }
 
-
     replaceWords(firstLocation, nonsenseLocInput);
     replaceWords(chairs, furnitureInput);
     replaceWords(candle, fireInput);
     replaceWords(drinkingVessel, jugInput);
+
+    disappearPoeam.classList.add('show-poem');
 });
 
 
