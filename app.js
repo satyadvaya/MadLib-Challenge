@@ -1,31 +1,29 @@
 // INPUTS
-const nonsenseLocInput= document.getElementById("non-sense-loc-input"); //
-const veggiesInput = document.getElementById("veggies-input");  ////
-const woodsInput = document.getElementById("woods-input");  ////
-const firstNameInput = document.getElementById("first-name-input"); ////
-const middleNameInput = document.getElementById("middle-name-input"); ////
-const lastNameInput = document.getElementById("last-name-input"); ////
-const furnitureInput = document.getElementById("furniture-input"); //
-const fireInput = document.getElementById("candle-input"); //
-const jugInput = document.getElementById("jug-input"); //
-const button = document.getElementById("button"); //
-const disappearPoeam = document.getElementById('disappear');
+const nonsenseLocInput= document.getElementById("non-sense-loc-input");
+const veggiesInput = document.getElementById("veggies-input");
+const woodsInput = document.getElementById("woods-input");
+const firstNameInput = document.getElementById("first-name-input");
+const middleNameInput = document.getElementById("middle-name-input");
+const lastNameInput = document.getElementById("last-name-input");
+const furnitureInput = document.getElementById("furniture-input");
+const fireInput = document.getElementById("candle-input");
+const jugInput = document.getElementById("jug-input");
+const button = document.getElementById("button");
+const disappearPoem = document.getElementById('disappear');
 
 // SPANS
-const firstLocation = document.getElementById("non-sense-loc"); //
-const vegetables = document.getElementsByClassName("vegetables"); ////
-const woods = document.getElementsByClassName("sticks");  ////
-const firstName = document.getElementsByClassName("first-name"); ////
-const middleName = document.getElementsByClassName("middle-name"); ////
+const firstLocation = document.getElementById("non-sense-loc");
+const vegetables = document.getElementsByClassName("vegetables");
+const woods = document.getElementsByClassName("sticks");
+const firstName = document.getElementsByClassName("first-name");
+const middleName = document.getElementsByClassName("middle-name");
 const lastName = document.getElementsByClassName("last-name");
-const chairs = document.getElementById("furniture");  //
-const candle = document.getElementById("fire"); //
-const drinkingVessel = document.getElementById("drinking-vessel");//
+const chairs = document.getElementById("furniture");
+const candle = document.getElementById("fire");
+const drinkingVessel = document.getElementById("drinking-vessel");
 
 // ADD EVENT LISTENERS
 button.addEventListener('click', ()=> {
-    
-
     for (let x of vegetables){
         x.textContent = veggiesInput.value;
     }
@@ -50,14 +48,10 @@ button.addEventListener('click', ()=> {
     replaceWords(candle, fireInput);
     replaceWords(drinkingVessel, jugInput);
 
-    disappearPoeam.classList.add('show-poem');
+    disappearPoem.classList.add('show-poem');
 });
-
-
-
 
 //FUNCTION REPLACE WORDS
     function replaceWords(span, input){
     span.textContent = input.value;
 }
-
