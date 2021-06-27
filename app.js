@@ -23,7 +23,7 @@ const candle = document.getElementById("fire");
 const drinkingVessel = document.getElementById("drinking-vessel");
 
 // ADD EVENT LISTENERS
-button.addEventListener('click', ()=> {
+button.addEventListener('click', () => {
     for (let x of vegetables){
         x.textContent = veggiesInput.value;
     }
@@ -39,6 +39,7 @@ button.addEventListener('click', ()=> {
     for (let z of middleName){
         z.textContent = middleNameInput.value;
     }
+
     for (let z of lastName){
         z.textContent = lastNameInput.value;
     }
