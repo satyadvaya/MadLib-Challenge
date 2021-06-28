@@ -8,8 +8,11 @@ const lastNameInput = document.getElementById("last-name-input");
 const furnitureInput = document.getElementById("furniture-input");
 const fireInput = document.getElementById("candle-input");
 const jugInput = document.getElementById("jug-input");
-const button = document.getElementById("button");
 const disappearPoem = document.getElementById('disappear');
+
+// BUTTONS
+const button = document.getElementById("button");
+const ufoBtn = document.getElementById("ufo");
 
 // SPANS
 const firstLocation = document.getElementById("non-sense-loc");
@@ -23,6 +26,7 @@ const candle = document.getElementById("fire");
 const drinkingVessel = document.getElementById("drinking-vessel");
 
 // ADD EVENT LISTENERS
+            //submit button
 button.addEventListener('click', () => {
     for (let x of vegetables){
         x.textContent = veggiesInput.value;
@@ -52,7 +56,30 @@ button.addEventListener('click', () => {
     disappearPoem.classList.add('show-poem');
 });
 
+                // reset button
+
+    ufoBtn.addEventListener('click', () => {
+        disappearPoem.classList.remove('show-poem');
+        blankInput(nonsenseLocInput);
+        blankInput(veggiesInput);
+        blankInput(woodsInput);
+        blankInput(firstNameInput);
+        blankInput(middleNameInput);
+        blankInput(lastNameInput);
+        blankInput(furnitureInput);
+        blankInput(fireInput);
+        blankInput(jugInput);
+    });
+
 //FUNCTION REPLACE WORDS
     function replaceWords(span, input){
     span.textContent = input.value;
+    }
+
+
+//FUNCTIONS TO CLEAN INPUTS
+
+function blankInput(inputss){
+return inputss.value = "";
+
 }
