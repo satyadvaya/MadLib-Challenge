@@ -1,5 +1,5 @@
 // INPUTS
-const nonsenseLocInput= document.getElementById("non-sense-loc-input");
+const nonsenseLocInput= document.getElementById("nonsense-loc-input");
 const veggiesInput = document.getElementById("veggies-input");
 const woodsInput = document.getElementById("woods-input");
 const firstNameInput = document.getElementById("first-name-input");
@@ -12,10 +12,10 @@ const disappearPoem = document.getElementById('disappear');
 
 // BUTTONS
 const button = document.getElementById("button");
-const ufoBtn = document.getElementById("ufo");
+const ufoButton = document.getElementById("ufo");
 
 // SPANS
-const firstLocation = document.getElementById("non-sense-loc");
+const firstLocation = document.getElementById("nonsense-loc");
 const vegetables = document.getElementsByClassName("vegetables");
 const woods = document.getElementsByClassName("sticks");
 const firstName = document.getElementsByClassName("first-name");
@@ -26,7 +26,7 @@ const candle = document.getElementById("fire");
 const drinkingVessel = document.getElementById("drinking-vessel");
 
 // ADD EVENT LISTENERS
-            //submit button
+    // SUBMIT BUTTON
 button.addEventListener('click', () => {
     for (let x of vegetables){
         x.textContent = veggiesInput.value;
@@ -56,30 +56,26 @@ button.addEventListener('click', () => {
     disappearPoem.classList.add('show-poem');
 });
 
-                // reset button
+    // RESET BUTTON
+ufoButton.addEventListener('click', () => {
+    disappearPoem.classList.remove('show-poem');
+    blankInput(nonsenseLocInput);
+    blankInput(veggiesInput);
+    blankInput(woodsInput);
+    blankInput(firstNameInput);
+    blankInput(middleNameInput);
+    blankInput(lastNameInput);
+    blankInput(furnitureInput);
+    blankInput(fireInput);
+    blankInput(jugInput);
+});
 
-    ufoBtn.addEventListener('click', () => {
-        disappearPoem.classList.remove('show-poem');
-        blankInput(nonsenseLocInput);
-        blankInput(veggiesInput);
-        blankInput(woodsInput);
-        blankInput(firstNameInput);
-        blankInput(middleNameInput);
-        blankInput(lastNameInput);
-        blankInput(furnitureInput);
-        blankInput(fireInput);
-        blankInput(jugInput);
-    });
-
-//FUNCTION REPLACE WORDS
-    function replaceWords(span, input){
+// FUNCTION TO REPLACE WORDS
+function replaceWords(span, input){
     span.textContent = input.value;
-    }
+}
 
-
-//FUNCTIONS TO CLEAN INPUTS
-
-function blankInput(inputss){
-return inputss.value = "";
-
+// FUNCTION TO CLEAR INPUTS
+function blankInput(inputs){
+    return inputs.value = "";
 }
